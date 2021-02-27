@@ -1,2 +1,2 @@
 # Toy Blog Website for Flask Learning
-This repository is the code for a blog website following a YouTube [tutorial](https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH) with minor revisions, which is intended for learning the Flask framework.
+This repository contains the code for a blog website following a YouTube [tutorial](https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH) with minor revisions, which is intended for learning the Flask framework.
