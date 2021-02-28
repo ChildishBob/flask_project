@@ -178,6 +178,8 @@ def send_reset_email(user):
 
 If you did not make this request, please ignore this email.'''
 
+    mail.send(msg)
+
 
 @app.route('/reset_password', methods=['GET', 'POST'])
 def reset_request():
