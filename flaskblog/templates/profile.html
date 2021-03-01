@@ -9,7 +9,7 @@
             </div>
             {% if current_user == user %}
                 <div>
-                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('account') }}">Update account information</a>
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('users.account') }}">Update account information</a>
                 </div>
             {% endif %}
         </div>
@@ -23,12 +23,12 @@
         <article class="media content-section">
             <div class="media-body">
                 <div class="article-metadata">
-                    <a class="mr-2" href="{{ url_for('profile', user_id=post.author.id) }}">{{ post.author.username }}</a>
+                    <a class="mr-2" href="{{ url_for('users.profile', user_id=post.author.id) }}">{{ post.author.username }}</a>
                     
                     <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
                 </div>
                 <h2>
-                    <a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a>
+                    <a class="article-title" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a>
                 </h2>
                 <p class="article-content">{{ post.content }}</p>
             </div>
@@ -37,9 +37,9 @@
     {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
         {% if page_num %}
             {% if page_num == posts.page %}
-                <a class="btn btn-info mb-4" href="{{ url_for('profile', page=page_num, user_id=user.id) }}">current page</a>
+                <a class="btn btn-info mb-4" href="{{ url_for('users.profile', page=page_num, user_id=user.id) }}">current page</a>
             {% else %}
-                <a class="btn btn-outline-info mb-4" href="{{ url_for('profile', page=page_num, user_id=user.id) }}">{{ page_num }}</a>
+                <a class="btn btn-outline-info mb-4" href="{{ url_for('users.profile', page=page_num, user_id=user.id) }}">{{ page_num }}</a>
             {% endif %}
         {% else %}
             ...
